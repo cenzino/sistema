@@ -2,8 +2,8 @@
 title: Sistema
 email: sistema@nomail.com
 description: ""
-baseurl: ""
-url: "http://cenzino.github.com"
+baseurl: "/sistema"
+url: ""
 
 # Build settings
 markdown: kramdown
