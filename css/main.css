@@ -1,7 +1,7 @@
 /* Base */
 /* ----------------------------------------------------------*/
 
-* {
+body,html,div {
   margin: 0;
   padding: 0;
 }
@@ -222,8 +222,8 @@ a:visited { color: #205caa; }
   margin: 30px 0;
 }
 
-.post-content ul,
-.post-content ol { padding-left: 20px; }
+/*.post-content ul,
+.post-content ol { padding-left: 20px; }*/
 
 .post pre,
 .post code {
@@ -238,8 +238,8 @@ a:visited { color: #205caa; }
 
 .post code { padding: 1px 5px; }
 
-.post ul,
-.post ol { margin-left: 1.35em; }
+/*.post ul,
+.post ol { margin-left: 1.35em; }*/
 
 .post pre code { border: none; }
 
@@ -393,8 +393,8 @@ a:visited { color: #205caa; }
   .post-content h3 { font-size: 22px; }
   .post-content h4 { font-size: 18px; }
   .post-content blockquote { padding-left: 10px; }
-  .post-content ul,
-  .post-content ol { padding-left: 10px; }
+/*  .post-content ul,
+  .post-content ol { padding-left: 10px; }*/
 
   .site-footer .column {
     float: none;

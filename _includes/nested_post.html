@@ -1,0 +1,18 @@
+
+<ol>
+	{% for post in site.posts reversed %}		
+		{% assign category = post.categories | last %}
+		{% if category == include.cat %}
+			{% assign id = post.id | split: '/' | last %}
+			<li>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+				{% comment %}<small>[url: {{ post.url }}] [cat: <i>{{ category }}</i>] [id: {{ id }}]</small>{% endcomment %}
+		    </li>
+		    
+			{% include nested_post.html cat=id %}
+	    {% endif %}
+    
+    {% endfor %}
+    {% assign category = nil %}
+    {% assign id = nil %}
+</ol>

@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% comment %}
 <div class="home">
 
   <h1>Posts</h1>
@@ -15,6 +16,9 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  {% comment %}<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>{% endcomment %}
 
 </div>
+{% endcomment %}
+<h1>Documento</h1>
+{% include nested_post.html cat="documento" %}
