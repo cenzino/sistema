@@ -6,6 +6,7 @@
 			{% assign id = post.id | split: '/' | last %}
 			<li>
 				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				<small><p><i>{{ post.descrizione }}</i></p></small>
 				{% comment %}<small>[url: {{ post.url }}] [cat: <i>{{ category }}</i>] [id: {{ id }}]</small>{% endcomment %}
 		    </li>
 		    

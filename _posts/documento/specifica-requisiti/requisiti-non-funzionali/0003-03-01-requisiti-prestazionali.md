@@ -2,6 +2,6 @@
 layout: post
 title:  "Requisiti prestazionali"
 categories: documento specifica-requisiti requisiti-non-funzionali
+descrizione: 
+  I requisiti prestazionali includono i requisiti in termini di numero di terminali supportati, numero di utenti che hanno l’accesso al sistema in modo concorrenziale, quantità e tipo di informazioni che possono essere contemporaneamente manipolate.
 ---
-
-Panoramica del documento
