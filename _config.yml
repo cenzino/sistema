@@ -1,0 +1,10 @@
+# Site settings
+title: Sistema
+email: sistema@nomail.com
+description: ""
+baseurl: ""
+url: "http://cenzino.github.com"
+
+# Build settings
+markdown: kramdown
+permalink: none
