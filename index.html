@@ -2,23 +2,10 @@
 layout: default
 ---
 
-{% comment %}
-<div class="home">
 
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  {% comment %}<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>{% endcomment %}
-
+<div class="jumbotron">
+  <h1>Documento SRS</h1>
+  <p>Documento di Specifica dei Requisiti <i>(Bozza)</i></p>
 </div>
-{% endcomment %}
 <h1>Documento</h1>
-{% include nested_post.html cat="documento" %}
+{% include nested_post.html cat="documento" liv=1%}

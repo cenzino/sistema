@@ -1,0 +1,16 @@
+<ol>
+  {% for post in site.posts reversed %}   
+    {% assign category = post.categories | last %}
+    {% if category == include.cat %}
+      {% assign id = post.id | split: '/' | last %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+        
+      {% include sidebar.html cat=id %}
+      {% endif %}
+    
+    {% endfor %}
+    {% assign category = nil %}
+    {% assign id = nil %}
+</ol>

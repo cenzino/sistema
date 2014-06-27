@@ -1,19 +1,25 @@
 
-<ol>
+{% if include.liv == null %}ERRORE{% endif %}
+<div class="post post-liv{{include.liv}}">	
 	{% for post in site.posts reversed %}		
 		{% assign category = post.categories | last %}
 		{% if category == include.cat %}
+			{% if include.liv == 1 %}
+				<div class="page-header"><h{{include.liv}}>{{ post.title }}</h{{include.liv}}></div>
+			{% else %}
+				<h{{include.liv}}>{{ post.title }}</h{{include.liv}}>
+			{% endif %}
 			{% assign id = post.id | split: '/' | last %}
-			<li>
-				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+							
+				<a href="{{ post.url | prepend: site.baseurl }}"></a>
 				<small><p><i>{{ post.descrizione }}</i></p></small>
-				{% comment %}<small>[url: {{ post.url }}] [cat: <i>{{ category }}</i>] [id: {{ id }}]</small>{% endcomment %}
-		    </li>
-		    
-			{% include nested_post.html cat=id %}
+				{{ post.content }}
+			{% capture l %}{{ include.liv | plus:1 }}{% endcapture %} 
+			{% include nested_post.html cat=id liv=l %}
 	    {% endif %}
     
     {% endfor %}
     {% assign category = nil %}
     {% assign id = nil %}
-</ol>
+    {% assign l = nil %}
+</div>
