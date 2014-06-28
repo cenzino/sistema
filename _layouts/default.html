@@ -26,7 +26,7 @@
             <li><a href="{{ site.baseurl }}/">Documento</a></li>
             <li class="active">{{ page.title }}</li>
           </ol>
-          <h1 class="page-header">{{ page.title }}</h1>
+          <h1 class="page-header">{{ page.title }}{% include info.html desc=page.descrizione %}</h1>
           {{ content }}
         </div>
       </div>

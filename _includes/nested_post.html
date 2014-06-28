@@ -16,12 +16,18 @@
 <div class="liv{{rLiv}}">
 {% for rPost in site.categories[categoria] reversed %}
 	{% assign rId = rPost.id | split: '/' | last %}
-
+	
+	<div>
 	{% if rLiv == 1 %}
-	  <h1 id={{rId}} class="page-header"><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h1>
+	  <h1 id={{rId}} class="page-header">
+	  	<a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a>{% include info.html desc=rPost.descrizione %}
+	  </h1>
 	{% else %}
-	  <h{{rLiv}} id={{rId}} class=""><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h{{rLiv}}>
+	  <h{{rLiv}} id={{rId}} class=""><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a>{% include info.html desc=rPost.descrizione %}
+	  </h{{rLiv}}>
 	{% endif %}
+
+	</div>
 	
 	{{ rPost.content }}
 

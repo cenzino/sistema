@@ -161,3 +161,20 @@ ul.affix-bottom {
   padding-left: 30px;
   font-size: 90%;
 }*/
+
+div.info {
+  position: relative;
+  display: inline-block;
+}
+
+span.info {
+  vertical-align: super;
+  font-size: 16px;
+  bottom: 30px;
+  color: rgba(41, 128, 185,0.4);
+  cursor:help;
+}
+
+span.info:hover {
+  color: rgba(41, 128, 185,1.0);
+}
