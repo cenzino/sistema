@@ -21,12 +21,15 @@
 	{% if rLiv == 1 %}
 	  <h1 id={{rId}} class="page-header">
 	  	<a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a>{% include info.html desc=rPost.descrizione %}
-	  </h1>
+	  	<div class="comment-count"><span class="glyphicon glyphicon-comment"></span> <a href="{{ site.baseurl }}{{ rPost.url }}#disqus_thread"></a></div>
+	  </h1>	  
 	{% else %}
-	  <h{{rLiv}} id={{rId}} class=""><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a>{% include info.html desc=rPost.descrizione %}
+	  <h{{rLiv}} id={{rId}} class="">
+	  	<a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a>{% include info.html desc=rPost.descrizione %}
+	  	<div class="comment-count"><span class="glyphicon glyphicon-comment"></span> <a href="{{ site.baseurl }}{{ rPost.url }}#disqus_thread"></a></div>
 	  </h{{rLiv}}>
 	{% endif %}
-	<div class="comment-count"><a href="{{ site.baseurl }}{{ rPost.url }}#disqus_thread"></a></div>
+	
 
 	</div>
 	

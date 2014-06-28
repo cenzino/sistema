@@ -178,3 +178,10 @@ span.info {
 span.info:hover {
   color: rgba(41, 128, 185,1.0);
 }
+
+.comment-count { font-size: 12px; color: #BBB; }
+.comment-count a,
+.comment-count a:hover,
+.comment-count a:focus {
+  color: #AAA;
+}
