@@ -10,3 +10,8 @@ markdown: kramdown
 permalink: none
 
 sidebar: false
+
+
+# comment
+disqus :
+  short_name : sistematic

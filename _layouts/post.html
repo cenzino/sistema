@@ -1,6 +1,5 @@
 ---
 layout: default
-comment: true
 ---
 
 <div class="post">
@@ -13,3 +12,8 @@ comment: true
 	{% include nested_post.html cat=idp liv=2 %}
 	{% endcomment %}
 </div>
+
+{{ page.comments }}
+{% if page.comments != false  %}
+	{% include comments.html %}
+{% endif %}
