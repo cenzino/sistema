@@ -1,11 +1,17 @@
 ---
 layout: default
+comment: true
 ---
 
+<a href="{{site.baseurl}}">Documento</a>
+
 <div class="post">
+	{% assign idp = page.id | split: '/' | last %}
 	<h1>{{ title }}</h1>
 	{{ content }}
 	
+	{% comment %}
 	{% assign idp = page.id | split: '/' | last %}
 	{% include nested_post.html cat=idp liv=2 %}
+	{% endcomment %}
 </div>

@@ -15,17 +15,19 @@
 
 <div class="liv{{rLiv}}">
 {% for rPost in site.categories[categoria] reversed %}
+	{% assign rId = rPost.id | split: '/' | last %}
 
 	{% if rLiv == 1 %}
-	  <h1 class="page-header"><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h1>
+	  <h1 id={{rId}} class="page-header"><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h1>
 	{% else %}
-	  <h{{rLiv}} class=""><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h{{rLiv}}>
+	  <h{{rLiv}} id={{rId}} class=""><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h{{rLiv}}>
 	{% endif %}
 	
 	{{ rPost.content }}
 
-	{% assign rLiv = rLiv | plus: 1 %}
-	{% assign rId = rPost.id | split: '/' | last %}
+	{% assign rPost = nil %}
+
+	{% assign rLiv = rLiv | plus: 1 %}	
 	{% include nested_post.html cat=rId liv=rLiv %}
 {% endfor %}
 </div>

@@ -6,6 +6,7 @@
 body {
   padding-top: 50px;
   font-family: "Droid Sans";
+  position: relative;
 }
 
 
@@ -51,8 +52,8 @@ body {
 }
 
 /* Sidebar navigation */
-.nav-sidebar {
-  margin-right: 1px; /* 20px padding + 1px border */
+/*.nav-sidebar {
+  margin-right: 1px;
   margin-bottom: 0px;
   margin-left: 0px;
 }
@@ -73,7 +74,7 @@ body {
 .nav-sidebar > li > a {
   padding: 0;
 }
-
+*/
 
 /*
  * Main content
@@ -95,3 +96,68 @@ body {
 .liv1 { background-color: none; padding: 0px; }
 .liv2 { background-color: none; margin-left: 0px; }
 .liv3 { background-color: none; margin-left: 0px; }
+
+
+/*ul.affix {
+  position: fixed; 
+  top: 60px;
+  left: 62px;
+  width: 360px;
+}
+ul.affix-top {
+  position: static;
+}
+ul.affix-bottom {
+  position: absolute;
+}*/
+
+/* First level of nav */
+.sidenav {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-top:    0px;
+  padding-bottom: 0px;
+  background-color: #f7f5fa;
+  border-radius: 5px;
+}
+
+/* All levels of nav */
+.sidebar .nav ul {
+  margin-left: 16px;
+}
+
+.sidebar .nav > li > a {
+  display: block;
+  color: #716b7a;
+  padding: 0px 6px;
+}
+.sidebar .nav > li > a:hover,
+.sidebar .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #e5e3e9;
+}
+.sidebar .nav > .active > a,
+.sidebar .nav > .active:hover > a,
+.sidebar .nav > .active:focus > a {
+  font-weight: bold;
+  color: #563d7c;
+  background-color: transparent;
+}
+
+/* Nav: second level */
+/*.sidebar .nav .nav {
+  display: none;
+}
+.sidebar .nav > li.active .nav {
+  display:block;
+}
+.sidebar .nav .nav {
+  margin-bottom: 8px;
+}
+.sidebar .nav .nav > li > a {
+  padding-top:    3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  font-size: 90%;
+}*/

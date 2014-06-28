@@ -13,13 +13,16 @@
 
 
 {% for rPost in site.categories[categoria] reversed %}
-  <li><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></li>
-
-  {% assign rLiv = rLiv | plus: 1 %}
   {% assign rId = rPost.id | split: '/' | last %}
-  <ol>
+  <li>
+  <a href="#{{rId}}">{{ rPost.title }}</a>
+  
+  {% assign rLiv = rLiv | plus: 1 %}
+  
+  <ul class="nav">
   {% include sidebar.html cat=rId liv=rLiv %}
-  </ol>
+  </ul>
+  </li>
 {% endfor %}
 
 {% assign categoria = nil %}
