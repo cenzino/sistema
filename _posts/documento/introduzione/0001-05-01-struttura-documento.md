@@ -1,8 +1,7 @@
-
 ---
 layout: post
 title:  "Struttura del documento"
-categories: documento introduzione
+categories: introduzione
 descrizione: 
   Descrive come è organizzato il documento delle specifiche.
 ---

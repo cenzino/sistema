@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Glossario"
-categories: documento introduzione
+categories: introduzione
 ---
 
 Questa sezione riporta le definizione di tutti i termini tecnici, acronimi e abbreviazioni utilizzati nel documento.
@@ -11,6 +11,7 @@ Questa sezione riporta le definizione di tutti i termini tecnici, acronimi e abb
     <th>Termine</th>
     <th>Descrizione</t>
 </tr>
+
 {% for termine in site.data.glossario %}
 <tr>    
 <td>{{ termine.termine }}</td>

@@ -3,8 +3,9 @@ layout: default
 ---
 
 <div class="post">
+	<h1>{{ title }}</h1>
+	{{ content }}
 	
-  {% assign idp = page.id | split: '/' | last %}
-  {% include nested_post.html cat=idp liv=2 %}
-
+	{% assign idp = page.id | split: '/' | last %}
+	{% include nested_post.html cat=idp liv=2 %}
 </div>

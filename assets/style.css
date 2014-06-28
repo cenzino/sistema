@@ -5,6 +5,7 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  font-family: "Droid Sans";
 }
 
 
@@ -90,3 +91,7 @@ body {
 .main .page-header {
   margin-top: 0;
 }
+
+.liv1 { background-color: none; padding: 0px; }
+.liv2 { background-color: none; margin-left: 0px; }
+.liv3 { background-color: none; margin-left: 0px; }

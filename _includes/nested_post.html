@@ -1,25 +1,37 @@
+{% if include.cat == null %}
+	{% assign categoria = 'documento' %}
+{% else %}
+	{% assign categoria = include.cat %}
+{% endif %}
 
-{% if include.liv == null %}ERRORE{% endif %}
-<div class="post post-liv{{include.liv}}">	
-	{% for post in site.posts reversed %}		
-		{% assign category = post.categories | last %}
-		{% if category == include.cat %}
-			{% if include.liv == 1 %}
-				<div class="page-header"><h{{include.liv}}>{{ post.title }}</h{{include.liv}}></div>
-			{% else %}
-				<h{{include.liv}}>{{ post.title }}</h{{include.liv}}>
-			{% endif %}
-			{% assign id = post.id | split: '/' | last %}
-							
-				<a href="{{ post.url | prepend: site.baseurl }}"></a>
-				<small><p><i>{{ post.descrizione }}</i></p></small>
-				{{ post.content }}
-			{% capture l %}{{ include.liv | plus:1 }}{% endcapture %} 
-			{% include nested_post.html cat=id liv=l %}
-	    {% endif %}
-    
-    {% endfor %}
-    {% assign category = nil %}
-    {% assign id = nil %}
-    {% assign l = nil %}
+{% if include.liv == null %}
+	{% assign rLiv = 1 %}
+{% else %}
+	{% assign rLiv = include.liv %}
+{% endif %}
+
+
+<span class="label label-danger">{{ post.id }}</span>
+
+<div class="liv{{rLiv}}">
+{% for rPost in site.categories[categoria] reversed %}
+
+	{% if rLiv == 1 %}
+	  <h1 class="page-header"><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h1>
+	{% else %}
+	  <h{{rLiv}} class=""><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></h{{rLiv}}>
+	{% endif %}
+	
+	{{ rPost.content }}
+
+	{% assign rLiv = rLiv | plus: 1 %}
+	{% assign rId = rPost.id | split: '/' | last %}
+	{% include nested_post.html cat=rId liv=rLiv %}
+{% endfor %}
 </div>
+
+
+{% assign categoria = nil %}
+{% assign rId = nil %}
+{% assign include.liv = nil %}
+{% assign rLiv = rLiv | minus: 1 %}

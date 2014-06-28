@@ -1,16 +1,29 @@
-<ol>
-  {% for post in site.posts reversed %}   
-    {% assign category = post.categories | last %}
-    {% if category == include.cat %}
-      {% assign id = post.id | split: '/' | last %}
-      <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-        
-      {% include sidebar.html cat=id %}
-      {% endif %}
-    
-    {% endfor %}
-    {% assign category = nil %}
-    {% assign id = nil %}
-</ol>
+{% if include.cat == null %}
+  {% assign categoria = 'documento' %}
+{% else %}
+  {% assign categoria = include.cat %}
+{% endif %}
+
+{% if include.liv == null %}
+  {% assign rLiv = 1 %}
+{% else %}
+  {% assign rLiv = include.liv %}
+{% endif %}
+
+
+
+{% for rPost in site.categories[categoria] reversed %}
+  <li><a href="{{ site.baseurl }}{{ rPost.url }}">{{ rPost.title }}</a></li>
+
+  {% assign rLiv = rLiv | plus: 1 %}
+  {% assign rId = rPost.id | split: '/' | last %}
+  <ol>
+  {% include sidebar.html cat=rId liv=rLiv %}
+  </ol>
+{% endfor %}
+
+{% assign categoria = nil %}
+{% assign rId = nil %}
+{% assign include.liv = nil %}
+{% assign rLiv = rLiv | minus: 1 %}
+{% assign rPost = nil %}

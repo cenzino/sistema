@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Altri requisiti"
-categories: documento specifica-requisiti requisiti-non-funzionali
+categories: requisiti-non-funzionali
 ---
 
 - Gruppi di utenti e relativi permessi per l’accesso alle funzionalità del sistema

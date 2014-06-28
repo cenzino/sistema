@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Attributi del sistema"
-categories: documento specifica-requisiti requisiti-non-funzionali
+categories: requisiti-non-funzionali
 descrizione:
   Elenchiamo alcune delle caratteristiche principali del software che possono essere considerate come requisiti veri e propri.
 ---

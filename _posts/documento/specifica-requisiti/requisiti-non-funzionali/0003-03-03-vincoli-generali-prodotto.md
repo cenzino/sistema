@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Vincoli generali di prodotto"
-categories: documento specifica-requisiti requisiti-non-funzionali
+categories: requisiti-non-funzionali
 descrizione:
   I vincoli generali del progetto elencano i vincoli imposti da altri standard, limitazioni hardware o altro.
 ---
