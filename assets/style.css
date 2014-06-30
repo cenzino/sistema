@@ -185,3 +185,15 @@ span.info:hover {
 .comment-count a:focus {
   color: #AAA;
 }
+
+h1 > a,
+h1 > a:hover,
+h1 > a:focus { color: #333; }
+
+h2 > a,
+h2 > a:hover,
+h2 > a:focus { color: #333; }
+
+h3 > a,
+h3 > a:hover,
+h3 > a:focus { color: #333; }
