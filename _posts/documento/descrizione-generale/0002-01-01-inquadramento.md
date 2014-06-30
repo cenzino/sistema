@@ -28,6 +28,7 @@ Necessita di strumenti per la gestione delle transazioni e degli ordini, la fatt
 Necessita di strumenti per la gestione del personale, del recruting e skilling, gestione della turnistica sulla base dei volumi produttivi pianificati.
 
 **Pianificazione e Controllo**
+
 Necessita di strumenti di supporto alle decisioni che forniscano le informazioni necessarie utili a pianificare  le strategie e le attività operative nel breve/medio/lungo periodo e di supporto alla gestione dei progetti.
 
 
